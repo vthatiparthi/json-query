@@ -28,7 +28,7 @@ public class App {
 	public static void main(String args[]) {
 		AppParameters parameters = new AppParameters();
 		JCommander parameterParser = new JCommander(parameters, args);
-		if (parameters.help) {
+		if (parameters.help || parameters.inputFile == null) {
 			parameterParser.usage();
 			return;
 		}
